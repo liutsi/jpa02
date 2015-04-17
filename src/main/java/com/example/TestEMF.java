@@ -7,6 +7,11 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
+/**
+ * http://tomee.apache.org/jpa-concepts.html 这是个很好的文档
+ * @author qcliu
+ *
+ */
 public class TestEMF {
 
 	public static void main(String[] args) {
