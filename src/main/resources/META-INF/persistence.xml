@@ -6,14 +6,18 @@
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-  <persistence-unit name="JPAServletPU" transaction-type="JTA">
-    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-    <jta-data-source>javatrial4870db</jta-data-source>
-    <!-- non-jta-data-source>java:comp/env/jdbc/kthx</non-jta-data-source -->
+  <persistence-unit name="JPAServletPU">
+  	<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider> <!-- transaction-type="JTA"-->
+    <!--jta-data-source>javatrial4870db</jta-data-source>
+     non-jta-data-source>java:comp/env/jdbc/kthx</non-jta-data-source -->
     
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <!-- property name="eclipselink.ddl-generation" value="create-tables"/ -->
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://www.kthx.com.cn:1521/wechat"/>
+      <property name="javax.persistence.jdbc.user" value="wechat"/>
+      <property name="javax.persistence.jdbc.password" value="zkWAMEsGL"/>
     </properties>
   </persistence-unit>
 </persistence>
